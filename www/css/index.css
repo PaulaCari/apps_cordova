@@ -105,3 +105,33 @@ a{
   font-weight: 600;
   text-transform: none;
 }
+
+/*Formulario*/
+form{
+  padding-top: 10px;
+  background: var(--branco);
+  padding-bottom: 20px;
+  /*border: 1px solid var(--preto);*/
+  position: relative; /*para a lupa*/
+}
+
+input[type="text"]{
+  width: 90%;
+  height: 45px;
+  background: var(--gelo);
+  border-radius: 10px;
+  margin: auto;
+  padding: 10px 20px;
+}
+
+::placeholder{
+  color: #b3afaf;
+}
+
+.icone-busca{
+  position: absolute;
+  top: 0px;
+  right: 5%;
+  font-size: 27px;
+  padding: 13px;
+}
