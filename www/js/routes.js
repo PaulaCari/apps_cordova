@@ -37,6 +37,12 @@ var app = new Framework7({
           var swiper = new Swiper(".mySwiper", {
             slidesPerView: 1, //quantidade de slider na tela
             spaceBetween: 30,
+            // freeMode: true,
+            //bolinhas para trocar os slider
+            // pagination: {
+            //   el: ".swiper-pagination",
+            //   clickable: true,
+            // },
 
             delay: 3000,
             autoplay: true,
@@ -59,13 +65,31 @@ var app = new Framework7({
               spaceBetween: 30
               }
             }
-            
-            // freeMode: true,
-            //bolinhas para trocar os slider
-            // pagination: {
-            //   el: ".swiper-pagination",
-            //   clickable: true,
-            // },
+          });
+
+
+          var swiper2 = new Swiper(".categorias", {
+            slidesPerView: 3,
+            spaceBetween: 10,
+            breakpoints: {
+              50: {
+                slidesPerView: 3,
+                spaceBetween: 10
+              },
+              640: {
+                slidesPerView: 6,
+                spaceBetween: 10
+              },
+              992: {
+                slidesPerView: 8,
+                spaceBetween: 10
+              },
+              1200: {
+                slidesPerView: 12,
+                spaceBetween: 10
+              }
+            }
+           
           });
 
         },
