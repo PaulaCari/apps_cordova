@@ -135,3 +135,8 @@ input[type="text"]{
   font-size: 27px;
   padding: 13px;
 }
+
+/*Scrollable page content Conteudo da pagina*/
+.page-content{
+  background: var(--branco);
+}
