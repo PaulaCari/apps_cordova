@@ -21,15 +21,21 @@ body{
     flex-flow: column wrap;
 }
 
+.toolbar-inner{
+    background: var(--branco);
+    border-top: 1px solid var(--gelo);
+}
 .toolbar-inner .link{    
     flex:1;
     height: 80px;  
     line-height: 25px; 
-	font-weight:bold;    
+	font-weight:bold; 
+    color: var(--verde);    
 }
 
 .toolbar-inner .link:not(.active){
-    color:gray;
+    /*color:var(--preto);*/
+    color: #333;
 	font-weight:normal;
 }
 
