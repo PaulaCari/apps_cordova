@@ -23,61 +23,75 @@ var app = new Framework7({
       animate: false,
       on: {
         pageBeforeIn: function (event, page) {
-        // fazer algo antes da página ser exibida
+          // fazer algo antes da página ser exibida
         },
         pageAfterIn: function (event, page) {
-        // fazer algo depois da página ser exibida
+          // fazer algo depois da página ser exibida
         },
         pageInit: function (event, page) {
-        // fazer algo quando a página for inicializada
+          // fazer algo quando a página for inicializada
+
+  /*adicionar para Swiper slyder*/
+          $.getScript('js/index.js')
+          //Initialize Swiper
+          var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3, //quantidade de slider na tela
+            spaceBetween: 30,
+            freeMode: true,
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+          });
+
         },
         pageBeforeRemove: function (event, page) {
-        // fazer algo antes da página ser removida do DOM
+          // fazer algo antes da página ser removida do DOM
         },
-	    }
+      }
     },
     {
       path: '/link2/',
       url: 'link2.html',
       animate: false,
-	  on: {
-      pageBeforeIn: function (event, page) {
-      // fazer algo antes da página ser exibida
-      },
-      pageAfterIn: function (event, page) {
-      // fazer algo depois da página ser exibida
-      },
-      pageInit: function (event, page) {
-      // fazer algo quando a página for inicializada
-      },
-      pageBeforeRemove: function (event, page) {
-      // fazer algo antes da página ser removida do DOM
-      },
-	   }
+      on: {
+        pageBeforeIn: function (event, page) {
+          // fazer algo antes da página ser exibida
+        },
+        pageAfterIn: function (event, page) {
+          // fazer algo depois da página ser exibida
+        },
+        pageInit: function (event, page) {
+          // fazer algo quando a página for inicializada
+        },
+        pageBeforeRemove: function (event, page) {
+          // fazer algo antes da página ser removida do DOM
+        },
+      }
     },
 
     {
       path: '/link3/',
       url: 'link3.html',
       animate: false,
-	  on: {
-      pageBeforeIn: function (event, page) {
-      // fazer algo antes da página ser exibida
-      },
-      pageAfterIn: function (event, page) {
-      // fazer algo depois da página ser exibida
-      },
-      pageInit: function (event, page) {
-      // fazer algo quando a página for inicializada
-      },
-      pageBeforeRemove: function (event, page) {
-      // fazer algo antes da página ser removida do DOM
-      },
-	   }
+      on: {
+        pageBeforeIn: function (event, page) {
+          // fazer algo antes da página ser exibida
+        },
+        pageAfterIn: function (event, page) {
+          // fazer algo depois da página ser exibida
+        },
+        pageInit: function (event, page) {
+          // fazer algo quando a página for inicializada
+        },
+        pageBeforeRemove: function (event, page) {
+          // fazer algo antes da página ser removida do DOM
+        },
+      }
     },
 
 
-//crie outra rota
+    //crie outra rota
     {
       path: '/link4/',
       url: 'link4.html',
@@ -98,7 +112,7 @@ var app = new Framework7({
       }
     },
 
-    
+
   ],
   // ... other parameters
 });
