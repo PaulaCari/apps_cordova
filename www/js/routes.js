@@ -32,16 +32,40 @@ var app = new Framework7({
           // fazer algo quando a página for inicializada
 
   /*adicionar para Swiper slyder*/
-          $.getScript('js/index.js')
+          $.getScript('js/index.js');
           //Initialize Swiper
           var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 3, //quantidade de slider na tela
+            slidesPerView: 1, //quantidade de slider na tela
             spaceBetween: 30,
-            freeMode: true,
-            pagination: {
-              el: ".swiper-pagination",
-              clickable: true,
-            },
+
+            delay: 3000,
+            autoplay: true,
+            loop: true,
+            breakpoints:{
+              50:{
+                slidesPerView:1,
+                spaceBetween:30
+              },
+              640:{
+                slidesPerView: 2,
+                spaceBetween: 30
+              },
+              992:{
+              slidesPerView: 3,
+              spaceBetween: 30
+              },
+              1200:{
+              slidesPerView: 4,
+              spaceBetween: 30
+              }
+            }
+            
+            // freeMode: true,
+            //bolinhas para trocar os slider
+            // pagination: {
+            //   el: ".swiper-pagination",
+            //   clickable: true,
+            // },
           });
 
         },
