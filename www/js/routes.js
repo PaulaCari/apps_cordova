@@ -24,6 +24,8 @@ var app = new Framework7({
       on: {
         pageBeforeIn: function (event, page) {
           // fazer algo antes da página ser exibida
+          //para mostrar o menu principal
+          $("#menuPrincipal").show("fast");
         },
         pageAfterIn: function (event, page) {
           // fazer algo depois da página ser exibida
@@ -172,6 +174,8 @@ var app = new Framework7({
       on: {
         pageBeforeIn: function (event, page) {
           // fazer algo antes da página ser exibida
+          // esconde o Toolbar (rodape)
+          $("#menuPrincipal").hide("fast");
         },
         pageAfterIn: function (event, page) {
           // fazer algo depois da página ser exibida
