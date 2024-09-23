@@ -81,6 +81,7 @@
     border: none;
     padding: 10px;
     color: var(--branco);
+    cursor: pointer; /* * */
 }
 
 
@@ -101,9 +102,10 @@
     margin: 3px;
 }
 
-.reviews{
+.color-gray{
     color: gray;
 }
+
 
 /* Tabela */
 table{
@@ -123,4 +125,33 @@ th,td{
 
 th{
     background-color: #ddd ;
+}
+
+/* Toolbar */
+.flex-40{
+    flex: 40%;
+}
+.flex-60{
+    flex: 60%;
+}
+
+.riscado {
+    text-decoration: line-through;
+}
+
+.princing{
+    font-weight: 800;
+    font-size: 22px;
+}
+
+.add-card{
+    width: 90%;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    background-color: var(--verde);
+    color: var(--branco);
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
 }
