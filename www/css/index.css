@@ -203,7 +203,7 @@ input[type="text"]{
   height: 240px;
   flex: 45%;
   margin-right: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 .img-container{
@@ -242,6 +242,8 @@ input[type="text"]{
 .price{
   font-size: 20px;
 }
+
+
 
 @media (min-width:992px) {
   .item-card {
