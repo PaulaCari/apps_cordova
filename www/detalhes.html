@@ -28,46 +28,45 @@
     <!-- Your main view, should have "view-main" class -->
     <div class="view view-main">
 
-      <!-- TAB BAR ou rodapé-->
-      <div class="toolbar toolbar-bottom">
-        <div class="toolbar-inner display-flex">
-          <a href="/index/" class="tab-link link active">
-            <i class="ri-home-5-line"></i>
-            <span>HOME</span>
-          </a>
-          <a href="/link2/" class="tab-link link">
-            <i class="ri-search-2-line"></i>
-            <span>BUSCA</span>
-          </a>
-          <a href="/link3/" class="tab-link link">
-            <i class="ri-heart-3-line"></i>
-            <span>FAVORITOS</span>
-          </a>
-
-          <a href="/link4/" class="tab-link link">
-            <i class="ri-user-line"></i>
-            <span>USUÁRIO</span>
-          </a>
-
-        </div>
-      </div>
+     
 
       <!-- Initial Page, "data-name" contains page name -->
       <div data-name="detalhes" class="page color-theme-blue">
 
-    
+    <!-- TAB BAR ou rodapé-->
+    <div class="toolbar toolbar-bottom">
+      <div class="toolbar-inner display-flex">
+        <div>R$ 1200</div>
+        
+        <div>
+          <button>Adicionar Carrinho</button>
+        </div>
+        </div>
+    </div>
    
 
         <!-- Conteudo da pagina
          Scrollable page content -->
         <div class="page-content">
+          
+          <div class="prod-detail">
+            <div class="buttons-top">
+              <a href="/index/"><i class="ri-arrow-left-s-line"></i></a>
+              <a href="#"><i class="ri-heart-3-line"></i></a>
+              <a href="#"><i class="ri-share-2-line"></i></a>
+            </div>
+
+            <!-- <img src="./img/default.png" alt=""> -->
+             <img src="./img/xbox.png" alt="">
+
+          </div>
          
        </div>
         </div>
       </div>
     </div>
   </div>
-  
+
   <!-- Path to Framework7 Library Bundle JS-->
   <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
   <!-- jQuery -->

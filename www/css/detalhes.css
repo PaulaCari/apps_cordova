@@ -1,0 +1,55 @@
+:root {
+    --branco: #fff;
+    --gelo: #f1f1f1;
+    --verde: #19c463;
+    --preto: #2a2a2a;
+}
+
+
+
+.prod-detail{
+    background: var(--gelo);
+    width: 100%;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.prod-detail img{
+    max-width: 400px;  
+}
+
+.buttons-top{
+    width: 100%;
+    top: 20px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons-top a{
+    width: 40px;
+    height: 40px;
+    background: var(--branco);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--preto);
+    border: 1px solid var(--gelo);
+    font-size: 18px;
+}
+/* joga os icone para esq e os 2 para dir */
+.buttons-top a:first-child{
+    margin-left: 20px;
+    margin-right: auto;
+}
+.buttons-top a:last-child{
+    margin-right: 20px;
+    margin-left: 5px;
+}
+
+
