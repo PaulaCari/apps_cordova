@@ -52,6 +52,8 @@
     margin-left: 5px;
 }
 
+
+/* modelo do produto e btn promoção */
 /* Produtos */
 .prod-content{
     background: var(--branco);
@@ -80,3 +82,26 @@
     padding: 10px;
     color: var(--branco);
 }
+
+
+/* botão estela e like */
+.btn-rates{
+    width: 80px;
+    border:1px solid #cbcbcb;
+    border-radius: 20px;
+    padding: 5px 10px;
+    background: none;
+    margin-right: 5px;
+    font-size: 16px;
+    
+}
+
+.ri-thumb-up-fill{
+    color: var(--verde);
+    margin: 3px;
+}
+
+.reviews{
+    color: gray;
+}
+
