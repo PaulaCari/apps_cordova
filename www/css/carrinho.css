@@ -33,13 +33,13 @@
     margin-right: 20px;
 }
 
-
+/* carrinho */
 #listacarrinho{
     display: flex;
     flex-flow: column wrap;
     margin-top: 20px;
     padding-bottom: 280px;/* * */
-    background-color: red;
+    /* background-color: red; */
 }
 
 /* item do carrinho */
@@ -133,7 +133,7 @@
 }
 
 .preco-quantidade .count .minus{
-    width: 50px;
+    width: 30px;
     height: 30px;
     display: flex;
     align-items: center;
@@ -145,8 +145,8 @@
     font-size: 20px;
 }
 
-.preco-quantidade .count .qtd-item {
-    width: 30%;
+ .qtd-item {
+    width: 30px;
     text-align: center;
     background: var(--branco) !important;
     
@@ -154,7 +154,7 @@
 }
 
 .preco-quantidade .count .plus{
-    width: 50px;
+    width: 30px;
     height: 30px;
     display: flex;
     align-items: center;
@@ -164,6 +164,31 @@
     border: 1px solid var(--verde);
     border-radius: 5px;
     font-size: 20px;
+}
+
+
+/* Toobar acima */
+.w-80 {
+    width: 80%;
+    padding: 8px 0px;
+
+    
+}
+
+#totais {
+    flex-direction: column;
+    
+}
+
+.bd-boton {
+    border-bottom: 1px solid var(--gelo);
+}
+   
+
+/* Toolbar ou rodape */
+.flex-100{
+    flex: 1;
+    text-align: center;
 }
 
 
