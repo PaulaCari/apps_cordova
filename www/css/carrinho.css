@@ -4,3 +4,32 @@
     --verde: #19c463;
     --preto: #2a2a2a;
 }
+
+/* cabeçalho */
+.nav-top.cart{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--branco);
+    padding: 10px 0px;
+}
+
+.nav-top.cart a{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--gelo);
+    border-radius: 50%;
+    color: var(--preto);
+}
+
+.nav-top.cart a:first-child{
+    margin-left: 20px;
+}
+.nav-top.cart a:last-child {
+    margin-right: 20px;
+}
+
