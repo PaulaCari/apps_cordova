@@ -183,6 +183,11 @@ input[type="text"]{
   overflow: hidden;/*esconder o que ficar por fora*/
   text-overflow: ellipsis;/*reticências*/
 }
+.filter-btn.active{
+  background: var(--verde);
+  color: var(--branco);
+  border: none;
+}
 
 
 /* div de produtos */
