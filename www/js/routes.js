@@ -20,7 +20,10 @@ var app = new Framework7({
     {
       path: '/index/',
       url: 'index.html',
-      animate: false,
+      // animate: false,
+      options: {    //efeito de transition ***
+        transition: 'f7-push',
+      },
       on: {
         pageBeforeIn: function (event, page) {
           // fazer algo antes da página ser exibida
@@ -33,7 +36,7 @@ var app = new Framework7({
         pageInit: function (event, page) {
           // fazer algo quando a página for inicializada
           //enviar a pag de carrinho
-          app.views.main.router.navigate('/carrinho/');
+          // app.views.main.router.navigate('/carrinho/'); tirei para fazer o efeito de abaertura do carrinho
          
 
   /*adicionar para Swiper slyder*/
@@ -193,7 +196,10 @@ var app = new Framework7({
     {
       path: '/carrinho/',
       url: 'carrinho.html',
-      animate: false,
+      // animate: false, desative para o efeito de abertura do carrinho cod do framework7
+      options: {  //efeito de transition
+        transition: 'f7-push',
+      },
       on: {
         pageBeforeIn: function (event, page) {
           // fazer algo antes da página ser exibida
