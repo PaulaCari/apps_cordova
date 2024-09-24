@@ -36,10 +36,29 @@
         <div class="nav-top cart">
           <a href="/index/"><i class="ri-arrow-left-s-line"></i></a>
           <strong> <i class="ri-shopping-cart-2-line"></i> Meu Carrinho</strong>
-          <a href="#"><i class="ri-more-fill"></i></a>
+          <!-- framework7 inseri a class -->
+          <a href="#" class="link popover-open" data-popover=".popover-menu"><i class="ri-more-fill"></i></a>
         </div>
 
-          <!-- Toolbar acima-->
+        <!-- framework7 cod-->
+        <div class="popover popover-menu">
+          <div class="popover-angle"></div>
+          <div class="popover-inner">
+            <div class="list">
+              <ul>
+                <li>
+                  <a  id="esvaziar" href="#" class="list-button popover-close">
+                    <i class="mdi mdi-broom"></i> 
+                      Esvaziar Carinho
+                  </a>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+
+          <!-- TAB bar acima-->
           <div style="margin-bottom:100px;" class="toolbar toolbar-bottom">
             <div id="totais" class="toolbar-inner display-flex align-items-center justify-content-center">
               
