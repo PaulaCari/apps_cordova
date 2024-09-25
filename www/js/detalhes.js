@@ -43,5 +43,36 @@ if (item){
 
 
 
+var carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+// função Adicionar ao carrinho
+function adicionarAoCarrinho(item, quantidade){  
+    var itemNoCarrinho = carrinho.find(c => c.item.id === item.id)
+
+    if (itemNoCarrinho){
+        // ja tem o item no carrinho asicionar a quantiodade
+        itemNoCarrinho.quantidade += quantidade;
+        itemNoCarrinho.total_item = itemNoCarrinho.quantidade * item.preco_promocional;
+
+    }else{
+        carrinho.push({
+            item: item,
+            quantidade: quantidade,
+            total_item: quantidade * item.preco_promocional
+        });
+    };
+
+    // atualizar localStorage de carrinho
+    localStorage.setItem('carrinho', JSON.stringify(carrinho) )
+
+    //clico no btn adiconar carrinho
+    $(".add-card").on('click', function(){
+        adicionarAoCarrinho(item, 1); //vem da var linha 7
+    })
+
+}
+
+
+
+
     
 
