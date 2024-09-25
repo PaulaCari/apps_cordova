@@ -54,7 +54,9 @@ fetch('js/backend.json')
 
 })
 // se der errado
-.catch(error => console.error('erro ao fazer fech dos dados: '+error));
+.catch(error => console.error('erro ao fazer fetch dos dados: '+error));
+
+// Ver quantos item tem dentro o carrinho
 
 
 

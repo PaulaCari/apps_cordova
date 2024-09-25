@@ -36,7 +36,8 @@ var app = new Framework7({
         pageInit: function (event, page) {
           // fazer algo quando a página for inicializada
           //enviar a pag de carrinho
-          app.views.main.router.navigate('/detalhes/'); // tirei para fazer o efeito de abaertura do carrinho
+          
+          //app.views.main.router.navigate('/detalhes/'); // tirei para fazer o efeito de abaertura do carrinho
          
 
   /*adicionar para Swiper slyder*/
