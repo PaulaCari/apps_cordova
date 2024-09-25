@@ -8,6 +8,11 @@ var item = produtos.find(produto => produto.id === id);
 
 if (item){
     console.log('Produto encontrado: ',item);
+
+    
+
+
+
 }else{
     console.log('Produto não encontrado');
 }
