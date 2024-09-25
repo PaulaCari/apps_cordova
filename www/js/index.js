@@ -10,12 +10,17 @@ fetch('js/backend.json')
     localStorage.setItem('produtos', JSON.stringify(data));
     console.log('Dados dos produtos salvos no localStorage');
 
-    // esvaziar a area de produtos (escodeu os card)
-    $("#produtos").empty();
 
-    // percorrido de  cada items
-    data.forEach(produto =>{
-        var produtoHTML = `
+    
+    // adicionar um temporizador (Simular o cargamento online)
+    setTimeout(() => {
+
+        // esvaziar a area de produtos (escodeu os card)
+        $("#produtos").empty();
+
+        // percorrido de  cada items
+        data.forEach(produto => {
+            var produtoHTML = `
              <!-- item card -->
                 <div class="item-card">
                   <a data-id="${produto.id}" href="#" class="item">
@@ -30,14 +35,16 @@ fetch('js/backend.json')
                        ${produto.rating}
                       </span>
                     </div>
-                    <div class="price"> ${produto.preco_promocional.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</div>
+                    <div class="price"> ${produto.preco_promocional.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</div>
                   </a>
                 </div>
         `;
-        // adiciona os produtos nos card
-        $("#produtos").append(produtoHTML)
-        
-    });
+            // adiciona os produtos nos card
+            $("#produtos").append(produtoHTML)
+
+        });
+
+    }, 2000); //tempo em milesegundos
 
 })
 // se der errado
@@ -45,4 +52,3 @@ fetch('js/backend.json')
 
 
 
-// alimentar a area dos produtos(card)
