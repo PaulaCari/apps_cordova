@@ -11,7 +11,7 @@ fetch('js/backend.json')
     console.log('Dados dos produtos salvos no localStorage');
 
 
-    
+
     // adicionar um temporizador (Simular o cargamento online)
     setTimeout(() => {
 
@@ -41,10 +41,16 @@ fetch('js/backend.json')
         `;
             // adiciona os produtos nos card
             $("#produtos").append(produtoHTML)
-
         });
 
-    }, 2000); //tempo em milesegundos
+        // direcionar para a pagina detalhes
+        $(".item").on('click',function(){
+            var id = $(this).attr('data-id');
+            localStorage.setItem('detalhe', id);
+            app.views.main.router.navigate('/detalhes/')
+        });
+
+    }, 1000); //tempo em milesegundos
 
 })
 // se der errado
