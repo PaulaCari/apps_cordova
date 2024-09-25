@@ -10,14 +10,28 @@ if (item){
     console.log('Produto encontrado: ',item);
 
     // Alimentar os valores dos item 
-    $("#imagem-detalhe").attr('src', item.imagem)
+    $("#imagem-detalhe").attr('src', item.imagem);
     $("#nome-detalhe").html(item.nome);
-    $("#rating-detalhe").html(item.rating)
-    $("#like-detalhe").html(item.likes)
+    $("#rating-detalhe").html(item.rating);
+    $("#like-detalhe").html(item.likes);
     $("#reviews-detalhe").html(item.reviews + ' reviews');
-    $("#descricao-detalhe").html(item.descricao)
+    $("#descricao-detalhe").html(item.descricao);
 
-
+    // Montar a Tabela
+    var tabelaDetalhes = $("#tabdetalhes");
+    // Percorrer detalhes
+    item.detalhes.forEach(detalhe => {
+        var linha = `
+        //  Criar a linha dinamicamente
+        <tr>
+            <td>${detalhe.caracteristica}</td>
+            <td>${detalhe.detalhes}</td>
+        </tr>
+        `;
+     //adiciionar a linha
+        tabelaDetalhes.append(linha);
+      
+    });
 
 }else{
     console.log('Produto não encontrado');
