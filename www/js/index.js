@@ -50,13 +50,21 @@ fetch('js/backend.json')
             app.views.main.router.navigate('/detalhes/')
         });
 
-    }, 1000); //tempo em milesegundos
+        }, 1000); //tempo em milesegundos
 
-})
-// se der errado
-.catch(error => console.error('erro ao fazer fetch dos dados: '+error));
+        })
+    // se der errado
+    .catch(error => console.error('erro ao fazer fetch dos dados: '+error));
+
 
 // Ver quantos item tem dentro o carrinho
+setTimeout(() => {
+  var carrinho = JSON.parse(localStorage.getItem('carrinho'));
+
+  // Alimentar o contador da sacola
+  $('.btn-cart').attr('data-count', carrinho.length);
+
+}, 300);
 
 
 
