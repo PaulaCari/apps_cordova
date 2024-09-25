@@ -115,7 +115,7 @@ form{
   position: relative; /*para a lupa*/
 }
 
-input[type="text"]{
+#search{
   width: 90%;
   height: 45px;
   background: var(--gelo);
