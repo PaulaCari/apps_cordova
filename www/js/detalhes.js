@@ -17,6 +17,10 @@ if (item){
     $("#reviews-detalhe").html(item.reviews + ' reviews');
     $("#descricao-detalhe").html(item.descricao);
 
+    // Toolbar
+    $("#preco-detalhe").html(item.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }));
+    $("#precopromo-detalhe").html(item.preco_promocional.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }));
+
     // Montar a Tabela
     var tabelaDetalhes = $("#tabdetalhes");
     // Percorrer detalhes
@@ -28,7 +32,7 @@ if (item){
             <td>${detalhe.detalhes}</td>
         </tr>
         `;
-     //adiciionar a linha
+     //adicionar a linha
         tabelaDetalhes.append(linha);
       
     });
