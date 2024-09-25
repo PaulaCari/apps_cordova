@@ -58,21 +58,27 @@ function adicionarAoCarrinho(item, quantidade){
             item: item,
             quantidade: quantidade,
             total_item: quantidade * item.preco_promocional
-        });
-    };
+        })
+    }
+
 
     // atualizar localStorage de carrinho
-    localStorage.setItem('carrinho', JSON.stringify(carrinho) )
-
-    //clico no btn adiconar carrinho
-    $(".add-card").on('click', function(){
-        adicionarAoCarrinho(item, 1); //vem da var linha 7
-    })
-
+    localStorage.setItem('carrinho', JSON.stringify(carrinho));
 }
+//clico no btn adiconar carrinho
+$(".add-card").on('click', function(){
+    adicionarAoCarrinho(item, 1); //vem da var linha 7
 
+    // adiconar componente framework7 toastcenter botão custumizado
+    var toastCenter = app.toast.create({
+        text: `${item.nome} adicionado ao carrinho`,
+        position: 'center',
+        closeTimeout: 2000,  
+    });
+    toastCenter.open();
+});
 
-
-
+  
     
 
+      
