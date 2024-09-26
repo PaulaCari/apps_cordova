@@ -38,6 +38,7 @@ var app = new Framework7({
           //enviar a pag de carrinho
           
           //app.views.main.router.navigate('/detalhes/'); // tirei para fazer o efeito de abaertura do carrinho
+          app.views.main.router.navigate('/carrinho/');
          
 
   /*adicionar para Swiper slyder*/
@@ -213,6 +214,7 @@ var app = new Framework7({
         },
         pageInit: function (event, page) {
           // fazer algo quando a página for inicializada
+          $.getScript('js/carrinho.js');
         },
         pageBeforeRemove: function (event, page) {
           // fazer algo antes da página ser removida do DOM
