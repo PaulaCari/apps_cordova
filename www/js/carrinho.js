@@ -25,6 +25,7 @@ if(localCarrinho){
 function carrinhoVazio(){
     console.log('Carrinho  esta Vazio');
 
+    //Esvaziar lista do carrinho
     $("#listacarrinho").empty();
 
     // Sumir os toolbar
