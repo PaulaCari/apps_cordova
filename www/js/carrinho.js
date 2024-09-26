@@ -22,14 +22,22 @@ if(localCarrinho){
 }
 
 // Primeira função
-function carrinhoVazio(){
+function carrinhoVazio() {
     console.log('Carrinho  esta Vazio');
-
     //Esvaziar lista do carrinho
     $("#listacarrinho").empty();
 
     // Sumir os toolbar
     $("#toolbarTotais").addClass('display-none');
     $("#toolbarCheckout").addClass('display-none');
+
+    // adiconar uma imagem sacolinha vazia
+    $("#listacarrinho").html(`
+        <div class="text-align-center">
+        <img width="300" src="img/empty.gif">
+        <br>
+        <span class="color-gray"> Nada por enquanto...!</span>
+        </div>
+        `)
 
 }
