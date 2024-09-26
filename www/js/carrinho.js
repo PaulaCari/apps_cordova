@@ -91,7 +91,36 @@ function renderizarCarrinho(){
             app.views.main.router.refreshPage();
         });
     });
+
+
+    // Activar os botoes minus 
+    $(".minus").on('click', function () {
+        var index = $(this).data('index');    
+        console.log('O indice é: ', index);
+
+        // Sem tem mais de um item na quantidade
+        if(carrinho[index].quantidade >1){
+            carrinho[index].quantidade--;
+            carrinho[index].total_item = carrinho[index].quantidade * carrinho[index].item.preco_promocional;
+
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+
+            app.views.main.router.refreshPage();
+        }else{
+            var itemname = carrinho[index].item.nome
+            app.dialog.confirm(`Gostaria de remover<strong>${itemname}</strong>?`, 'REMOVER',function(){
+
+                carrinho.splice(index, 1);
+                localStorage.setItem('carrinho', JSON.stringify(carrinho));
+                renderizarCarrinho();
+                calcularTotal(); 
+            });
+        }
+    });
+
+  
 }
+
 
 
 //terceira funcção calcular Total (subtotal)
