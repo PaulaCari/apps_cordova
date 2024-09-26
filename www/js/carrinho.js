@@ -35,7 +35,8 @@ function renderizarCarrinho(){
     $.each(carrinho, function(index, itemCarrinho){
         var itemDiv = `
             <!-- item do carrinho -->
-             <div class="item-carrinho" data-index="${index}">
+
+             <div class="item-carrinho">
               <div class="area-img">
                 <img src="${itemCarrinho.item.imagem}" alt="">
               </div>
@@ -46,7 +47,7 @@ function renderizarCarrinho(){
                     ${itemCarrinho.item.nome}
                   </span>
 
-                  <a class="delete-item" href="#">
+                  <a data-index="${index}" class="delete-item" href="#">
                     <i class="mdi mdi-close"></i>
                   </a>
                 </div>
@@ -72,7 +73,26 @@ function renderizarCarrinho(){
 
         $("#listacarrinho").append(itemDiv);      
     });
+
+
+
+    //activar o botão de deletar (X)
+    $(".delete-item").on('click', function () {
+        var index = $(this).data('index');    //attr('data-index')
+        console.log('O indice é: ', index);
+        //Confirmar
+        app.dialog.confirm('Tem certeza que quer remover este item?', 'Remover', function () {
+            
+            // Remover o item do carrrinho
+            carrinho.splice(index, 1);
+            // Atualizar o carrinho com item removido
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+            //Atualizar a pagina
+            app.views.main.router.refreshPage();
+        });
+    });
 }
+
 
 //terceira funcção calcular Total (subtotal)
 function calcularTotal(){
@@ -116,5 +136,6 @@ $("#esvaziar").on('click', function(){
         //Recargar a pagina
         app.views.main.router.refreshPage();
     });
-
 })
+
+
