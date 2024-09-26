@@ -26,4 +26,7 @@ function carrinhoVazio(){
     console.log('Carrinho  esta Vazio');
 
     $("#listacarrinho").empty();
+
+    // Sumir o toolbar
+    
 }
