@@ -8,8 +8,12 @@ if(localCarrinho){
     var carrinho = JSON.parse(localCarrinho);
     if(carrinho.length >0){
         // tem item no carrinho
+
         // Renderizar o carrinho
+        renderizarCarrinho();
+
         // somar totais dos produtos
+
     }else{
         //mostrar carrinho vazio
         carrinhoVazio();
@@ -20,6 +24,57 @@ if(localCarrinho){
     // Mostrar carrinho vazio
     carrinhoVazio();
 }
+
+// segunda função renderizar carrinho
+function renderizarCarrinho(){
+    //Esvaziar a area dos item
+    $("#listacarrinho").empty();
+
+    //Percorrer o nosso carrinho e alimentar a area 
+    $.each(carrinho, function(index, itemCarrinho){
+        var itemDiv = `
+            <!-- item do carrinho -->
+             <div class="item-carrinho" data-index="${index}">
+              <div class="area-img">
+                <img src="${itemCarrinho.item.imagem}" alt="">
+              </div>
+
+              <div class="area-details">
+                <div class="sup">
+                  <span class="name-prod">
+                    ${itemCarrinho.item.nome}
+                  </span>
+
+                  <a class="delete-item" href="#">
+                    <i class="mdi mdi-close"></i>
+                  </a>
+                </div>
+
+                   <div class="middle">
+                  <span>${itemCarrinho.item.principal_caracteristica}</span>
+                </div>
+                
+
+                <div class="preco-quantidade">
+                  <span>  ${itemCarrinho.item.preco_promocional.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
+
+
+                  //botões menos e mas
+                  <div class="count">
+                    <a class="minus"  data-index="${index}"   href="#">-</a>
+                    <input readonly class="qtd-item" type="text" value="${itemCarrinho.quantidade}"> 
+                    <!-- readonly é só letura não poden alterar -->
+                    <a class="plus"   data-index="${index}"   href="#">+</a>
+                  </div>
+                </div>
+               </div>
+        `;
+
+        $("#listacarrinho").append(itemDiv);      
+    });
+}
+
+
 
 // Primeira função
 function carrinhoVazio() {
