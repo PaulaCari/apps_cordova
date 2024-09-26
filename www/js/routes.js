@@ -38,7 +38,8 @@ var app = new Framework7({
           //enviar a pag de carrinho
           
           //app.views.main.router.navigate('/detalhes/'); // tirei para fazer o efeito de abaertura do carrinho
-          app.views.main.router.navigate('/carrinho/');
+
+          //app.views.main.router.navigate('/carrinho/');
          
 
   /*adicionar para Swiper slyder*/
