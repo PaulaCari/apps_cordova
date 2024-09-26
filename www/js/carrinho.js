@@ -93,7 +93,7 @@ function renderizarCarrinho(){
     });
 
 
-    // Activar os botoes minus 
+    // Activar os botoes minus (-)
     $(".minus").on('click', function () {
         var index = $(this).data('index');    
         console.log('O indice é: ', index);
@@ -118,7 +118,18 @@ function renderizarCarrinho(){
         }
     });
 
-  
+    // Activar os botão mais (+)
+    $(".plus").on('click', function () {
+        var index = $(this).data('index');
+        console.log('O indice é: ', index);
+
+        carrinho[index].quantidade++;
+        carrinho[index].total_item = carrinho[index].quantidade * carrinho[index].item.preco_promocional;
+
+        localStorage.setItem('carrinho', JSON.stringify(carrinho));
+        renderizarCarrinho();
+        calcularTotal();  
+    });
 }
 
 
