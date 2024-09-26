@@ -12,10 +12,18 @@ if(localCarrinho){
         // somar totais dos produtos
     }else{
         //mostrar carrinho vazio
+        carrinhoVazio();
 
     }
 
 }else{
     // Mostrar carrinho vazio
+    carrinhoVazio();
 }
 
+// Primeira função
+function carrinhoVazio(){
+    console.log('Carrinho  esta Vazio');
+
+    $("#listacarrinho").empty();
+}
