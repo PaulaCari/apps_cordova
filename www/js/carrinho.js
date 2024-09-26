@@ -38,6 +38,18 @@ function carrinhoVazio() {
         <br>
         <span class="color-gray"> Nada por enquanto...!</span>
         </div>
-        `)
-
+    `);
 }
+
+//deletar os item da saco
+$("#esvaziar").on('click', function(){
+    app.dialog.confirm('Tem certeza que quer esvaziar o carrinho?', 'ESVAZIAR', function(){
+
+        //Apagar o localstorage do carrinho
+        localStorage.removeItem('carrinho');
+
+        //Recargar a pagina
+        app.views.main.router.refreshPage();
+    });
+
+})
