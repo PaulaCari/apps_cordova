@@ -59,7 +59,7 @@ fetch('js/backend.json')
 
 // Ver quantos item tem dentro o carrinho
 setTimeout(() => {
-  var carrinho = JSON.parse(localStorage.getItem('carrinho'));
+  var carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
   // Alimentar o contador da sacola
   $('.btn-cart').attr('data-count', carrinho.length);
