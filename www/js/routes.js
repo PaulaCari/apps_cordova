@@ -39,7 +39,7 @@ var app = new Framework7({
           
           //app.views.main.router.navigate('/detalhes/'); // tirei para fazer o efeito de abaertura do carrinho
 
-          //app.views.main.router.navigate('/carrinho/');
+          //app.views.main.router.navigate('/carrinho/'); desactivei
          
 
   /*adicionar para Swiper slyder*/
@@ -230,9 +230,7 @@ var app = new Framework7({
 
 
 
-//Para testes direto no navegador
-var mainView = app.views.create('.view-main', { url: '/index/' });
-
+//Para testes direto no navegador debe estar ativada a ln 235
 //Para testes direto no celular  tem que estar desabilitada
 //var mainView = app.views.create('.view-main', { url: '/index/' });
 
