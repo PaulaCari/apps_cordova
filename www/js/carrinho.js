@@ -27,6 +27,8 @@ function carrinhoVazio(){
 
     $("#listacarrinho").empty();
 
-    // Sumir o toolbar
-    
+    // Sumir os toolbar
+    $("#toolbarTotais").addClass('display-none');
+    $("#toolbarCheckout").addClass('display-none');
+
 }
