@@ -13,6 +13,7 @@ if(localCarrinho){
         renderizarCarrinho();
 
         // somar totais dos produtos
+        calcularTotal();
 
     }else{
         //mostrar carrinho vazio
@@ -58,8 +59,7 @@ function renderizarCarrinho(){
                 <div class="preco-quantidade">
                   <span>  ${itemCarrinho.item.preco_promocional.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
 
-
-                  //botões menos e mas
+                 
                   <div class="count">
                     <a class="minus"  data-index="${index}"   href="#">-</a>
                     <input readonly class="qtd-item" type="text" value="${itemCarrinho.quantidade}"> 
@@ -74,6 +74,16 @@ function renderizarCarrinho(){
     });
 }
 
+//terceira funcção calcular Total (subtotal)
+function calcularTotal(){
+    var totalCarrinho = 0;
+    //Percorrer o carinho
+    $.each(carrinho, function (index, itemCarrinho) {
+        totalCarrinho += itemCarrinho.total_item;
+    });
+    //Mostrar o total
+    $("#subtotal").html(totalCarrinho.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }));
+}
 
 
 // Primeira função
